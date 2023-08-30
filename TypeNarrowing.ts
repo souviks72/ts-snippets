@@ -1,4 +1,4 @@
-// Typeof Narrowing: --> work with primirtuves only
+// Typeof Narrowing: --> work with primitives only
 // a typeof check on an interface or class will always return
 // the type as object. Use instanceof, "in", predicate, discriminant check etc
 function triple(value: number | string) {
@@ -8,6 +8,7 @@ function triple(value: number | string) {
   return value * 3;
 }
 
+// Truthiness Narrowing:
 const el = document.getElementById("idk");
 if (el) {
   el;
@@ -15,7 +16,7 @@ if (el) {
   el;
 }
 
-// Truthiness Narrowing:
+
 const printLetters = (word?: string) => {
   if (word) {
     for (let char of word) {
